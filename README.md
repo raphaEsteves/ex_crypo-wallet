@@ -5,13 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
+* Ruby version: 3.1.1
+* Rails version: 7.0.2.3
+* SQLite version: 3.8.0
 
 * Database initialization
 
