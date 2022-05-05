@@ -10,3 +10,16 @@
 <% a = "Variável" %>
 <p> Exibindo conteúdo da variável a: <%= a %> </p>
 <p> Dia de hoje: <%= Date.today %> </p>
+
+<!-- Helper: link_to -->
+<ul>
+    <li>
+        <a href="/coins">Cadastro de Moedas </a>
+    </li>
+    <li>
+        <%= link_to "Cadastro de Moedas", "/coins" %>
+    </li>
+    <li>
+        <%= link_to "Cadastro de Moedas", coins_path %>
+    </li>
+</ul>
