@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  #get 'welcome/index'
+  get 'welcome/index'
+  get '/inicio', to: 'welcome#index'
+  
   resources :coins
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
