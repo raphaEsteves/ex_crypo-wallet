@@ -1,36 +1,27 @@
 <h1>Seja Bem-Vindo!</h1>
-<p>
-    Raphael
-</p>
-<!-- O sinal de igual exibe o conteúdo Ruby na página -->
-<p>A soma é: <%= 1 + 1 %> </p>
-<p>Nome de trás pra frente <%= "Raphael".reverse %></p>
+<hr>
+<!-- Importando a página _menu.html.erb -->
+<%= render "menu" %>
+<hr>
 
-<!-- Sem o sinal não aparece o conteúdo entre a marcação -->
-<% a = "Variável" %>
-<p> Exibindo conteúdo da variável a: <%= a %> </p>
-<p> Dia de hoje: <%= Date.today %> </p>
-<p> Dia de hoje formatado: <%= Date.today.strftime("%d/%m/%Y")%></p>
-<p> Dia de hoje formatado 2: <%= date_br(Date.today) %></p>
+<!-- O sinal de igual exibe o conteúdo Ruby na página -->
+
+<p> A soma é: <%= 1 + 1 %> </p>
+<p> Nome de trás pra frente <%= "Raphael".reverse %> </p>
+
+<!-- Sem o sinal de igual não aparece o conteúdo entre a marcação -->
+<% 
+    #isso não será exibido
+    a = "Variável escondida" 
+%>
+
+<p> Exibindo conteúdo da variável 'a': <strong> <%= a %> </strong> </p>
+<p> Data: <strong> <%= Date.today %> </strong> </p>
+<p> Data formatada: <strong> <%= Date.today.strftime("%d/%m/%Y")%> </strong> </p>
+<p> Data formatada através de Helper criado: <strong> <%= date_br(Date.today) %> </strong> </p>
 
 <hr>
 <h3> Acessando variáveis globais e de sessão por URL </h3>
-<p> 
-    Variável definida no código <strong> <%= @meu_nome %> </strong>. 
-</p>
+<p> Variável definida no código <strong> <%= @meu_nome %> </strong>. </p>
 
-<p> 
-    O curso digitado na URL foi <strong> <%= @meu_curso %> </strong> e o nível é <strong> <%= @meu_nivel %> </strong>.
-</p>
-<!-- Helper: link_to -->
-<ul>
-    <li>
-        <a href="/coins">Cadastro de Moedas </a>
-    </li>
-    <li>
-        <%= link_to "Cadastro de Moedas", "/coins" %>
-    </li>
-    <li>
-        <%= link_to "Cadastro de Moedas", coins_path %>
-    </li>
-</ul>
+<p> O curso digitado na URL foi <strong> <%= @meu_curso %> </strong> e o nível é <strong> <%= @meu_nivel %> </strong>. </p>
