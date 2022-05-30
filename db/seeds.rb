@@ -5,3 +5,27 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Coin.create!(
+    {
+        description: "Bitcoin",
+        acronym: "BTC",
+        url_image: "https://www.mercadobitcoin.com.br/resources/assets/v2/img/icons/assets/ico-btc-color.svg"
+    }
+)
+
+Coin.create!(
+    {
+        description: "Ethereum",
+        acronym: "ETH",
+        url_image: "https://www.mercadobitcoin.com.br/resources/assets/v2/img/icons/assets/ico-eth-color.svg"
+    }
+)
+
+Coin.create!(
+    {
+        description: "ApeCoin",
+        acronym: "APE",
+        url_image: "https://www.mercadobitcoin.com.br/resources/assets/v2/img/icons/assets/ico-ape-color.svg"
+    }
+)
